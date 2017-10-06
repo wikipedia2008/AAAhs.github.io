@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  {% for category in site.categories %}
+  {% assign catname = category | first | lowercase %}
+  {% if catname == 'ios' %}
+    {% assign capcatname = 'iOS' %}
+  {% else %}
+    {% assign capcatname = catname | capitalize %}
+  {% endif %}
+  {% if catname != site.locale %}
+  <div class="markdown-body">
+  <h2>{{ capcatname }} </span>({{ category | last | size }})</span></h2>
+  </div>
+  <ul class="post-list">
+    {% for post in category.last %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endfor %}
+
+</div>

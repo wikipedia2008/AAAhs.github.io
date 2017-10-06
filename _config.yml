@@ -1,0 +1,20 @@
+# Dependencies
+gems: [jemoji]
+
+# Site settings
+title: AAAhs's Blog
+email: alex.liang.t@gmail.com
+description: Talk about development
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://aaahs.github.io" # the base hostname & protocol for your site
+github_username:  AAAhs
+
+# Build settings
+# Github flavored markdown style
+markdown: GFM
+
+# markdown: redcarpet
+# redcarpet:
+  # extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "fenced_code_blocks", "with_toc_data"]
+
+locale: en
