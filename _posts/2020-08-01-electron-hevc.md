@@ -8,7 +8,7 @@ categories: work
 
 公司里的视频项目的资源较多，文件体积大，不仅很占用磁盘空间，而且传播时很占用带宽，所以在某一次决定里计划将所有视频从 H264 格式转成 H265 格式，这样视频资源体积起码降低了 1/3 的大小，也降低了带宽的占用。
 
-由于项目的 PC 客户端使用的是基于 Chromium 和 Nodejs 的 Electron 框架编写的，所以经过调研后，网上有好几种方案，最后参考了 [修改 Chromium 源码，实现 HEVC/H.265 4K 视频播放](https://www.infoq.cn/article/s65bFDPWzdfP9CQ6Wbw6) 这边文章，决定尝试编译一下 Electron ，让能够直接通过 `<video>` 标签就能播放 H265 视频。
+由于项目的 PC 客户端使用的是基于 Chromium 和 Nodejs 的 Electron 框架编写的，Electron 是无法直接播放 H265 视频。经过调研后，发现网上有好几种方案，最后参考了 [修改 Chromium 源码，实现 HEVC/H.265 4K 视频播放](https://www.infoq.cn/article/s65bFDPWzdfP9CQ6Wbw6) 这篇文章，决定尝试编译一下 Electron ，让能够直接通过 `<video>` 标签就能播放 H265 视频。
 
 下面的内容仅仅记录我在构建时遇到的问题，如果想直接下载支持 H265 播放的 Electron ，可以点击 [这里](https://github.com/AAAhs/electron-hevc/releases/tag/v9.1.2-hevc) 下载对应平台的 Electron。
 
